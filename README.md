@@ -41,5 +41,6 @@ On future pageloads.
 
 Requirements
 =======
-phpass: http://www.openwall.com/phpass/
-PHP with Blowfish support. This is implemented internally in 5.3. Earlier versions require system support for it.
+* phpass: http://www.openwall.com/phpass/
+
+* PHP with Blowfish support. This is implemented internally in 5.3. Earlier versions require system support for it.
