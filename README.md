@@ -39,4 +39,7 @@ On future pageloads.
     
     // $result is false if the cookie is invalid, or the cookie vars as an array if it's valid.
 
-    
+Requirements
+=======
+phpass: http://www.openwall.com/phpass/
+PHP with Blowfish support. This is implemented internally in 5.3. Earlier versions require system support for it.
