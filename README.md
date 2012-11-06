@@ -14,30 +14,37 @@ Usage
 
 Pass the constructor your secret server key.
 
+```php
     $secret = "sekrit";
     $cookies = new StatelessCookie($secret);
-    
+```
+
 A user signs up:
 
+```php
     $hash = $cookies->hashPassword("password123");
 
     //Store $hash in your user database.
+```
 
 A user logs-in. Retrieve $storedhash from your database.
 
+```php
     $auth = $cookies->login("password123", $storedhash);
     $cookie = $cookies->buildCookie(strtotime("+1 hour"), 'admin', $auth);
     setcookie("auth", $cookie);
-
+```
 
 On future pageloads.
 
+```php
     $cookie = $_COOKIE['auth'];
     $user = $cookies->getCookieData($cookie);
     // Fetch the user's stored hash from the database...
     $result = $cookies->checkCookie($cookie, $storedhash);
     
     // $result is false if the cookie is invalid, or the cookie vars as an array if it's valid.
+```
 
 Requirements
 =======
