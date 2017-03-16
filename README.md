@@ -1,4 +1,4 @@
-PHP stateless cookies
+This is unmaintained. Do not use unmaintained crypto!
 ============
 
 Implements a stateless session cookie and user account mechanism.
